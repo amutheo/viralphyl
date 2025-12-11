@@ -1,5 +1,5 @@
 # Viralphyl: Usage
-This documentation provides an overview of how the pipeline works, and a description of the required command-line flags 
+This documentation provides detailed usage parameters and the required command-line flags 
 
 ## Standard Usage 
 
@@ -26,7 +26,7 @@ nextflow run main.nf -profile docker,local --fastq_dir raw_reads/ --outdir Resul
                                 │   ├── barcode01/
 ```
 
-```--metadata_tsv ```
+```--metadata_tsv ``` (Optional)
 
 This specifies the path to a tab separated values (tsv) file that contains the sample metadata. The tsv must include the following data partaining the samples; 'sequence_run', 'barcode_num', 'sample_id' and 'collection_date' columns. If these conditions are not met, the samples missing required metadata will be excluded from the run. 
 
@@ -213,7 +213,8 @@ The flag gives you the option to choose the max sequences in tree (the default i
  This is a column name in the metadata TSV file to use for coloring (the default is color by: 'region')
 
  ##  Metagenomics Workflow Parameters:
- ### GLOBAL PARAMETER OPTIONS:
+
+ ### Global Parameters:
 
   ```--human_genome```
 
@@ -243,6 +244,7 @@ For the number of top organisms to report per sample from the mash classifier, y
 
 
 This gives the specification of the minimum reads required per taxon (species/strain) to qualify for assembly.
+
 
 
 

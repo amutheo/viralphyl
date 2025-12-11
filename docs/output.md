@@ -8,9 +8,10 @@ The directories and subdirectories listed correspond to the various steps and st
 
 # Amplicon: Pipeline overview  
 - [Preprocessing](#amplicon-preprocessing) 
-  -  [custom python script](#amplicon-sample-sheet) - sample sheet and metadata  
+  -  [custom python script](#amplicon-sample-sheet) - sample sheet and metadata 
+    -  [NanoPlot](#amplicon-nanoplot) Sequencing QC 
     -  [artic guppyplex](#amplicon-artic-guppyplex) - Filter and aggregate demultiplexed reads from MinKNOW/Guppy
-  -  [NanoPlot](#amplicon-nanoplot) Sequencing QC
+ 
 - [Whole genome assembly](#amplicon-whole-genome-assembly--variant-calling)
   -  [artic minion](#amplicon-artic-minion) - Align reads, call variants, and produce a consensus sequence 
   -  [mosdepth](#amplicon-mosdepth) - Genome-wide and amplicon coverage QC plots
@@ -64,7 +65,7 @@ The parametes for the minimum and maximum lenth can be adjusted using ```--min_r
 
 ### Amplicon: artic minion
 
-The [artic minion]() is a tool from the [ARTIC field bioinformatics pipeline](https://github.com/artic-network/fieldbioinformatics), used to filter, trim, align the reads, call variants and produce a consesus sequence. The artic minion version used is 
+The [artic minion]() is a tool from the [ARTIC field bioinformatics pipeline](https://github.com/artic-network/fieldbioinformatics), used to filter, trim, align the reads, call variants and produce a consesus sequence.
 
 ### Amplicon: Mosdepth 
 [Mosdepth](https://github.com/brentp/mosdepth) calculates the depth coverage, and gives the amplicon coverage QC plots. 
@@ -177,13 +178,8 @@ All samples are compiled into a single sample sheet using a python custom script
 
 
 ### Metagenomics: efetch
-[efetch](https://github.com/maurermj08/efetch) is a web-based explorer used in file fetching, viewing and analysis. 
+[epost utilities](https://github.com/maurermj08/efetch) is a NCBI utility used in downloading reference sequence for genome assembly
 
-### Metagenomics: Quast
-[Quast](https://github.com/ablab/quast) is a tool used to evaluate the quality of the assembled genomes. The given metrics are based on contig size, genome coverage, GC content, and contiguity statistics. 
-
-### Metagenomics: Blast 
-[Blast]() is used for similarity search, for identification and annotation of the obtained assemblies. 
 
 ### Metagenomics: minimap2 and samtools
 [Minimap](https://github.com/lh3/minimap2) and [Samtools](https://github.com/samtools/samtools) are used to generate a consensus genome from the generated assemblies 
